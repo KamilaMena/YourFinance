@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Login/style.css" />
+    <title>Inicio de sesión</title>
+    <link
+      rel="icon"
+      href="/Login/assets/img/Logo_1-removebg-preview.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <div class="formulario">
+      
+      <div class="logo-container">
+        <img
+          src="/Login/assets/img/Logo_1-removebg-preview.png"
+          alt="Logo"
+          class="logo-img"
+        />
+        <h2 class="nombre-pagina">YourFinance</h2>
+      </div>
+
+      <h1>Iniciar sesión</h1>
+
+      <form
+        method="post"
+        onsubmit="event.preventDefault(); window.location.href='/PP/PP.html';"
+      >
+        <div class="usuario">
+          <input type="text" required />
+          <label>Usuario</label>
+        </div>
+
+        <div class="contraseña">
+          <input type="password" required />
+          <label>Contraseña</label>
+        </div>
+
+        <input type="submit" value="Ingresar" />
+
+        <div class="registrarse">
+  
+        </div>
+
+      </form>
+
+    </div>
+
+  </body>
+</html>

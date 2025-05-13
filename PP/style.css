@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Karla, sans-serif;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Barra de navegación */
+
+.navbar {
+  background: linear-gradient(90deg, #2d4450, #345a6c);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-texto {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.contenedor-navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.logo-texto {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.menu a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #8ecae6;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a:hover {
+  color: #8ecae6;
+  transform: translateY(-5px);
+}
+
+/* Contenedor principal */
+
+.contenedor {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.resumen h2,
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Tarjetas de resumen */
+
+.grid-finanzas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.box {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* se eleva */
+  transform: translateY(-5px); /* leve levantamiento */
+  background-color: #f1f1f1;
+}
+
+.box h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.box p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.ingresos p {
+  color: #16a34a;
+}
+
+.gastos p {
+  color: #dc2626;
+}
+
+.ahorros p {
+  color: #3b82f6;
+}
+
+.presupuesto p {
+  color: #f59e0b;
+}
+
+/* Transferir ahorros */
+
+.transferir-ahorros {
+  background-color: #e0f7e9;
+  border: 2px dashed #1a7f37;
+  color: #1a7f37;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.transferir-ahorros:hover {
+  background-color: #d0f0df;
+  transform: scale(1.02);
+}
+
+.transferir-ahorros p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Formulario */
+
+.formulario {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.formulario h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.campo {
+  margin-bottom: 1.2rem;
+}
+
+.campo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: #345a6c;
+  outline: none;
+}
+
+.btn-submit {
+  content: "";
+  width: 100%;
+  background-color: #345a6c;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.8s, box-shadow 0.4s ease-in-out,
+    transform 0.4s ease-in-out, border 0.4s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.btn-submit:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  border: 2px solid #8ecae6;
+  background-color: #8ecae6;
+  color: #345a6c;
+}
+
+.tabla {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tabla th,
+.tabla td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla thead {
+  background-color: #f3f4f6;
+  color: #555;
+}
+
+.positivo {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.negativo {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+td.ahorro {
+  color: #1a7f37;
+  font-weight: bold;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #345a6c;
+  color: white;
+  margin-top: 2rem;
+}

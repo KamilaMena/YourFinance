@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="/Perfil/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="icon"
+      href="/Perfil/assets/img/Logo_1-removebg-preview.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="contenedor-navbar">
+        <div class="logo-contenedor">
+          <img
+            src="/Perfil/assets/img/Logo_11-removebg-preview.png"
+            alt="Logo FinanzasApp"
+            class="logo-img"
+          />
+          <h1 class="logo-texto">YourFinance</h1>
+        </div>
+        <nav class="menu">
+          <a href="/Inicio/Inicio.html">Inicio</a>
+          <a href="/PP/PP.html">Movimientos</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="profile-container">
+      <h2>Mi Perfil</h2>
+      <div class="profile-card">
+        <div class="img-container">
+          <img
+            id="profile-img"
+            src="/Perfil/assets/img/Foto de perfil.png"
+            alt="Foto de perfil"
+          />
+          <label for="img-upload" class="camera-overlay">
+            <i class="fas fa-camera"></i>
+          </label>
+          <input type="file" id="img-upload" accept="image/*" />
+        </div>
+        <div class="input-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Escribe tu nombre" />
+        </div>
+        <div class="input-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" placeholder="ejemplo@correo.com" />
+        </div>
+        <button onclick="guardarPerfil()">Guardar cambios</button>
+        <div id="mensaje" class="mensaje"></div>
+      </div>
+    </main>
+
+    <script src="/Perfil/script.js"></script>
+  </body>
+</html>

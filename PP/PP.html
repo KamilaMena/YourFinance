@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourFinance</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="/PP/assets/img/Logo_1-removebg-preview.png"
+      type="image/png"
+    />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="contenedor-navbar">
+        <div class="logo-contenedor">
+          <img
+            src="assets/img/Logo_11-removebg-preview.png"
+            alt="Logo FinanzasApp"
+            class="logo-img"
+          />
+          <h1 class="logo-texto">YourFinance</h1>
+        </div>
+        <nav class="menu">
+          <a href="/Inicio/Inicio.html">Inicio</a>
+          <a href="/Login/Login.html">Iniciar sesión</a>
+          <a href="/Perfil/Perfil.html">Perfil</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="contenedor">
+      <section class="resumen">
+        <h2>Tu información</h2>
+        <div class="grid-finanzas">
+          <div class="box ingresos">
+            <h3>Ingresos</h3>
+            <p id="ingresos">$0</p>
+          </div>
+          <div class="box gastos">
+            <h3>Gastos</h3>
+            <p id="gastos">$0</p>
+          </div>
+          <div class="box ahorros">
+            <h3>Ahorros</h3>
+            <p id="ahorros">$0</p>
+          </div>
+          <div class="box presupuesto">
+            <h3>Saldo disponible</h3>
+            <p id="presupuesto">$0</p>
+          </div>
+        </div>
+
+        <div class="transferir-ahorros" id="transferirAhorros">
+          <p>
+            ¿Necesitas tus ahorros? <strong>Haz clic aquí</strong> para
+            transferirlos a tu saldo disponible.
+          </p>
+        </div>
+      </section>
+
+      <section class="formulario">
+        <h2>Agregar movimiento</h2>
+        <form id="formularioMovimiento">
+          <div class="campo">
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" required>
+              <option value="">Selecciona el tipo de movimiento</option>
+              <option value="ingreso">Ingreso</option>
+              <option value="gasto">Gasto</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="tipoMovimiento">Método:</label>
+            <select id="tipoMovimiento" required>
+              <option value="">Selecciona una opción</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" required>
+              <option value="">Selecciona una categoría</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="monto">Valor:</label>
+            <input type="number" id="monto" placeholder="$$$" required />
+          </div>
+          <button type="submit" class="btn-submit">Guardar información</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Últimos movimientos</h2>
+        <table class="tabla" id="tablaMovimientos">
+          <thead>
+            <tr>
+              <th>Fecha y hora</th>
+              <th>Tipo</th>
+              <th>Categoría</th>
+              <th>Tipo de movimiento</th>
+              <th>Monto</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      © 2025 YourFinance <br />
+      Kamila Mena <br />
+      Juan David Guerra<br />
+      Valentina Ospina
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <script src="/PP/script.js"></script>
+  </body>
+</html>
