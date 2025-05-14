@@ -185,3 +185,22 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+.features {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  color: #345a6c;
+}
+.features h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+.features li {
+  font-size: 18px;
+  margin: 10px 0;
+}
